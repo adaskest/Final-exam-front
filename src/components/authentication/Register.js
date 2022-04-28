@@ -2,10 +2,9 @@ import {useRef, useState} from 'react';
 import "./authenticationStyle.css"
 import http from "../../plugins/http";
 import {Button} from "react-bootstrap";
-import {BsFillXCircleFill} from "react-icons/bs";
 import {useNavigate} from "react-router-dom";
 
-const Register = ({setUser}) => {
+const Register = () => {
 
     const [status, setStatus] = useState(null)
     const [photo, setPhoto] = useState('');
@@ -41,8 +40,8 @@ const Register = ({setUser}) => {
             nav('/authentic/login')
         } else {
             setStatus(res.message)
-            if (res.message === "Toks slapyvardis egzistuoja") return setUsernameClass("form-control is-invalid")
-            if (res.message === "Toks el. paštas jau užregistruotas") return setEmailClass("form-control is-invalid")
+            if (res.message === "Username exists") return setUsernameClass("form-control is-invalid")
+            if (res.message === "Email exists") return setEmailClass("form-control is-invalid")
         }
     }
 
@@ -136,7 +135,7 @@ const Register = ({setUser}) => {
                        aria-label="Username"
                        aria-describedby="basic-addon1"
                        style={{
-                           backgroundColor: '#f5f8fd', fontSize: '14px'
+                           backgroundColor: '#f5f8fd', fontSize: '16px'
                        }}/>
             </div>
         </div>
@@ -147,7 +146,7 @@ const Register = ({setUser}) => {
                        placeholder="Email address" aria-label="Email"
                        aria-describedby="basic-addon1"
                        style={{
-                           backgroundColor: '#f5f8fd', fontSize: '14px'
+                           backgroundColor: '#f5f8fd', fontSize: '16px'
                        }}/>
             </div>
         </div>
@@ -166,7 +165,7 @@ const Register = ({setUser}) => {
                        placeholder="Profile picture URL" aria-label="Username"
                        aria-describedby="basic-addon1"
                        style={{
-                           backgroundColor: '#f5f8fd', fontSize: '14px'
+                           backgroundColor: '#f5f8fd', fontSize: '16px'
                        }}/>
             </div>
 
@@ -181,7 +180,7 @@ const Register = ({setUser}) => {
                        placeholder="Password" aria-label="Username"
                        aria-describedby="basic-addon1"
                        style={{
-                           backgroundColor: '#f5f8fd', fontSize: '14px'
+                           backgroundColor: '#f5f8fd', fontSize: '16px'
                        }}/>
             </div>
         </div>
@@ -191,7 +190,7 @@ const Register = ({setUser}) => {
                        placeholder="Repeat password" aria-label="Username"
                        aria-describedby="basic-addon1"
                        style={{
-                           backgroundColor: '#f5f8fd', fontSize: '14px'
+                           backgroundColor: '#f5f8fd', fontSize: '16px'
                        }}/>
             </div>
         </div>
