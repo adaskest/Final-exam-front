@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import mainContext from "./context/mainContext";
+import IndexPage from "./pages/IndexPage";
+import AuthenticPage from "./pages/AuthenticPage";
+import Toolbar from "./components/toolbar/Toolbar";
+import {useState} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [user, setUser] = useState(null)
+
+
+    return (
+        <mainContext.Provider value={{
+            user,
+            setUser,
+        }}>
+            <Router>
+                <Toolbar/>
+                <Routes>
+                    <Route path='/' element={<IndexPage/>}/>
+                    <Route path='/authentic/:signup' element={<AuthenticPage/>}/>
+                </Routes>
+            </Router>
+        </mainContext.Provider>
+    );
 }
 
 export default App;
