@@ -1,0 +1,1 @@
+import React from 'react';import {Container} from "react-bootstrap";import UserProfile from "../components/userProfile/UserProfile";const UserPage = () => {    return (        <Container fluid='sm'>            <UserProfile/>        </Container>    );};export default UserPage;

@@ -29,7 +29,6 @@ const Login = () => {
             stayLoggedIn
         }
         const res = await http.post("/login", user)
-        console.log(res)
         if (res.success) {
             setUser(res.user)
             setStatus(null)

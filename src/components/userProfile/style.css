@@ -1,0 +1,92 @@
+.stay-top {
+    align-items: flex-start;
+}
+
+.userPhoto {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.position {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.header-container_ {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.mx-10 {
+    margin: 0 10px;
+}
+
+.align-center-column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 22px;
+    margin: 10px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    height: 40vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.grow1 {
+    flex: 1;
+}
+
+.grow3 {
+    flex: 3;
+}
+
+.header-tabs {
+    width: 25%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    border-bottom: 2px solid lightgray;
+}
+
+.header-tabs:hover {
+    background: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.color {
+    background: grey;
+}

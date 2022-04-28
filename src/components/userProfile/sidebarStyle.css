@@ -1,0 +1,133 @@
+.profile-sidebar-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.profile-photo-username-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-username {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.profile-photo-username-wrap hr {
+    color: black;
+    width: 100%;
+}
+
+.sidebar-tab-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.sidebar-tab {
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    transition: 0.1s all linear;
+}
+
+.sidebar-tab:hover {
+    background-color: #705c5c;
+}
+
+.sidebar-tab p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-tab-wrap hr {
+    width: 100%;
+    color: black;
+}
+
+.sidebar-underTab {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.sidebar-underTab-select {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 5px;
+}
+
+.sidebar-underTab-select:hover {
+    background-color: #705c5c;
+}
+
+.sidebar-underTab p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-email-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.sidebar-email-wrap p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.sidebar-email-wrap svg {
+    font-size: 20px;
+}
+
+.sidebar-email-wrap hr {
+    width: 100%;
+    color: black;
+    border: none;
+}
+
+.profile-sidebar-btn {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    background-color: #5557d4 !important;
+    border-radius: 4px;
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s all ease-in;
+    padding: 10px 40px;
+    border: none;
+}
+
+.profile-sidebar-btn:hover {
+    background-color: #5557d4 !important;
+}
+
+.phone-change-modal-button {
+    background-color: #5557d4;
+    font-weight: 600;
+    transition: 0.1s all ease-in;
+    border: none;
+}
+
+.phone-change-modal-button:hover {
+    background-color: #5557d4;
+}

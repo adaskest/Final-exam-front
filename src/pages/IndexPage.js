@@ -1,1 +1,1 @@
-import React from 'react';const IndexPage = () => {    return (        <div>                    </div>    );};export default IndexPage;
+import React from 'react';import {Container} from "react-bootstrap";const IndexPage = () => {    return (        <Container fluid='sm'>        </Container>    );};export default IndexPage;

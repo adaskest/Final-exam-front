@@ -23,3 +23,11 @@ html, body {
 a {
     text-decoration: none;
 }
+
+hr {
+    background-color: white;
+}
+
+p {
+    margin: 0;
+}
