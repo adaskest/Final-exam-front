@@ -11,6 +11,8 @@ const Sidebar = () => {
     const {user, setUser} = useContext(mainContext)
     const [showChangePassword, setShowChangePassword] = useState(false)
     const [showChangePhoto, setShowChangePhoto] = useState(false)
+    const date = new Date(user?.createdAccount)
+    const time = `${date.getFullYear()}:${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}:${date.getDay() < 10 ? "0" + date.getDay() : date.getDay()}`
 
     return (
         <div className="profile-sidebar-wrap">
@@ -19,6 +21,7 @@ const Sidebar = () => {
                     <img className="userPhoto" src={user?.photo} alt=""/>
                     <div className="d-flex flex-column align-items-center">
                         <p className="profile-username">{user?.username}</p>
+                        <p style={{fontSize: 12}}>User from: {time}</p>
                     </div>
                 </div>
 

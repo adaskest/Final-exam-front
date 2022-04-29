@@ -31,3 +31,7 @@ hr {
 p {
     margin: 0;
 }
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
