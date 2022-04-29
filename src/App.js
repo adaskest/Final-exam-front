@@ -12,6 +12,7 @@ import CreateTopicPage from "./pages/CreateTopicPage";
 function App() {
 
     const [user, setUser] = useState(null)
+    const [topics, setTopics] = useState([])
 
     useEffect(() => {
         async function stayLoggedIn() {
@@ -30,6 +31,8 @@ function App() {
         <mainContext.Provider value={{
             user,
             setUser,
+            topics,
+            setTopics
         }}>
             <Router>
                 <Toolbar/>

@@ -35,7 +35,6 @@ const Register = () => {
             passwordTwo: passwordTwoRef.current.value,
         }
         const res = await http.post("/register", newUser)
-        console.log(res)
         if (res.success) {
             nav('/authentic/login')
         } else {
@@ -66,7 +65,7 @@ const Register = () => {
     function emailValidation() {
         if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailRef.current.value)) {
             emailRef.current.value = ''
-            setStatus('Email should be like \"email@email.com\"')
+            setStatus('Email should be like "email@email.com"')
             return setEmailClass("form-control is-invalid")
         }
         if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailRef.current.value)) {
