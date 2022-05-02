@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style.css"
 
-const Header = ({userTopics, tab, setTab}) => {
+const Header = ({userTopics, tab, setTab, userPosts}) => {
 
     return (
-        <div className="header-container_ ">
+        <div className="header-container_  mb-3">
             <div className="mx-10 d-flex justify-content-between">
                 <div
                     className={tab === 'topics' ? "header-tabs color" : "header-tabs"}
@@ -16,7 +16,7 @@ const Header = ({userTopics, tab, setTab}) => {
                     className={tab === 'posts' ? "header-tabs color" : "header-tabs"}
                     onClick={() => setTab('posts')}>
                     <p>Your Posts<span className='hide'>&nbsp;</span></p>
-                    <p>()</p>
+                    <p>({userPosts.postsCount})</p>
                 </div>
             </div>
         </div>

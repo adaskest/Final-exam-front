@@ -9,11 +9,14 @@ import http from "./plugins/http";
 import UserPage from "./pages/UserPage";
 import CreateTopicPage from "./pages/CreateTopicPage";
 import SingleTopicPage from "./pages/SingleTopicPage";
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
 
     const [user, setUser] = useState(null)
     const [topics, setTopics] = useState([])
+    const [favorites, setFavorites] = useState([])
+    const [favoritesIds, setFavoritesIds] = useState([])
 
     useEffect(() => {
         async function stayLoggedIn() {
@@ -28,12 +31,26 @@ function App() {
         stayLoggedIn()
     }, [])
 
+    useEffect(() => {
+        const value = JSON.parse(localStorage.getItem('favorites'))
+        if (value) {
+            setFavoritesIds(JSON.parse(localStorage.getItem('favorites')))
+        } else {
+            localStorage.setItem('favorites', JSON.stringify([]));
+            setFavoritesIds([])
+        }
+    }, [])
+
     return (
         <mainContext.Provider value={{
             user,
             setUser,
             topics,
-            setTopics
+            setTopics,
+            favoritesIds,
+            setFavoritesIds,
+            favorites,
+            setFavorites
         }}>
             <Router>
                 <Toolbar/>
@@ -44,6 +61,7 @@ function App() {
                     <Route path='/user-profile' element={<UserPage/>}/>
                     <Route path='/create-topic' element={<CreateTopicPage/>}/>
                     <Route path='/topic/:id' element={<SingleTopicPage/>}/>
+                    <Route path='/favorites' element={<FavoritesPage/>}/>
                 </Routes>
             </Router>
         </mainContext.Provider>
