@@ -78,7 +78,7 @@ textarea {
     align-items: center;
     align-content: center;
     color: white;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid grey;
 }
 
 .header-tabs:hover {

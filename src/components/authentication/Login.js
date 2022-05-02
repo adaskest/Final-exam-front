@@ -95,7 +95,7 @@ const Login = () => {
                     <input onClick={() => setStayLoggedIn(!stayLoggedIn)} className="form-check-input auth-form-check"
                            type="checkbox" value="" id="flexCheckDefault"/>
                     <label className="form-check-label" htmlFor="flexCheckDefault"
-                           style={{fontWeight: 550, color: '#e94c89', fontSize: '14px'}}>Stay logged in? </label>
+                           style={{fontWeight: 550, color: '#937c84', fontSize: '14px'}}>Stay logged in? </label>
                 </div>
             </div>
             <Button className="inputStyle auth-btn" onClick={validateUserForm}>Login</Button>

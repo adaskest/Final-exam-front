@@ -8,6 +8,7 @@ import Toolbar from "./components/toolbar/Toolbar";
 import http from "./plugins/http";
 import UserPage from "./pages/UserPage";
 import CreateTopicPage from "./pages/CreateTopicPage";
+import SingleTopicPage from "./pages/SingleTopicPage";
 
 function App() {
 
@@ -36,11 +37,13 @@ function App() {
         }}>
             <Router>
                 <Toolbar/>
+                <hr/>
                 <Routes>
                     <Route path='/' element={<IndexPage/>}/>
                     <Route path='/authentic/:signup' element={<AuthenticPage/>}/>
                     <Route path='/user-profile' element={<UserPage/>}/>
                     <Route path='/create-topic' element={<CreateTopicPage/>}/>
+                    <Route path='/topic/:id' element={<SingleTopicPage/>}/>
                 </Routes>
             </Router>
         </mainContext.Provider>

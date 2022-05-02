@@ -1,31 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./style.css"
 
-const Header = () => {
-
-    const [getState, setState] = useState(1);
-    const [userUploadedProducts, setUserUploadedProducts] = useState([])
-    const [getUserBids, setUserBids] = useState([])
-
-    function selectedTab(x) {
-        setState(x)
-    }
-
+const Header = ({userTopics, tab, setTab}) => {
 
     return (
         <div className="header-container_ ">
             <div className="mx-10 d-flex justify-content-between">
                 <div
-                    className={getState === 1 ? "header-tabs color" : "header-tabs"}
-                    onClick={() => selectedTab(1)}>
+                    className={tab === 'topics' ? "header-tabs color" : "header-tabs"}
+                    onClick={() => setTab('topics')}>
                     <p>Your Topics<span className='hide'>&nbsp;</span></p>
-                    <p className='break-word'>({userUploadedProducts.length})</p>
+                    <p>({userTopics.topicsCount})</p>
                 </div>
                 <div
-                    className={getState === 2 ? "header-tabs color" : "header-tabs"}
-                    onClick={() => selectedTab(2)}>
+                    className={tab === 'posts' ? "header-tabs color" : "header-tabs"}
+                    onClick={() => setTab('posts')}>
                     <p>Your Posts<span className='hide'>&nbsp;</span></p>
-                    <p className='break-word'>({getUserBids.length})</p>
+                    <p>()</p>
                 </div>
             </div>
         </div>

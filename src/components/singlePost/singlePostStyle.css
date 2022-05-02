@@ -1,0 +1,1 @@
+.single-post {    display: flex;    flex-direction: column;    justify-content: center;}.single-post-header {    width: 100%;    display: flex;    background-color: #818a95;}.flex-1 {    flex: 1;}.flex-4 {    flex: 4;}.border-radius0 {    border-radius: 0;}

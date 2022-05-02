@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export default {
     post: async (url, data) => {
         const options = {

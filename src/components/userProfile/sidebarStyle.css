@@ -1,7 +1,7 @@
 .profile-sidebar-wrap {
     flex-direction: column;
     align-items: flex-start;
-    color: white;
+    color: #423b3b;
 }
 
 .profile-photo-username-wrap {
@@ -39,7 +39,7 @@
 }
 
 .sidebar-tab:hover {
-    background-color: #705c5c;
+    background-color: grey;
 }
 
 .sidebar-tab p {
