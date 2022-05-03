@@ -10,6 +10,7 @@ import UserPage from "./pages/UserPage";
 import CreateTopicPage from "./pages/CreateTopicPage";
 import SingleTopicPage from "./pages/SingleTopicPage";
 import FavoritesPage from "./pages/FavoritesPage";
+import NotificationsPage from "./pages/NotificationsPage";
 
 function App() {
 
@@ -17,14 +18,13 @@ function App() {
     const [topics, setTopics] = useState([])
     const [favorites, setFavorites] = useState([])
     const [favoritesIds, setFavoritesIds] = useState([])
+    const [notifications, setNotifications] = useState([])
 
     useEffect(() => {
         async function stayLoggedIn() {
             if (localStorage.getItem("stayLoggedIn") === "true") {
                 const res = await http.get("/stayLoggedIn")
-                if (res.success) {
-                    setUser(res.user)
-                }
+                if (res.success) setUser(res.user)
             }
         }
 
@@ -50,7 +50,9 @@ function App() {
             favoritesIds,
             setFavoritesIds,
             favorites,
-            setFavorites
+            setFavorites,
+            notifications,
+            setNotifications
         }}>
             <Router>
                 <Toolbar/>
@@ -62,6 +64,7 @@ function App() {
                     <Route path='/create-topic' element={<CreateTopicPage/>}/>
                     <Route path='/topic/:id' element={<SingleTopicPage/>}/>
                     <Route path='/favorites' element={<FavoritesPage/>}/>
+                    <Route path='/notifications' element={<NotificationsPage/>}/>
                 </Routes>
             </Router>
         </mainContext.Provider>
