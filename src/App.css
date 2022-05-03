@@ -6,6 +6,7 @@ html, body {
 #root {
     min-height: 100vh;
     background-color: #d5d5d5;
+    padding-bottom: 50px;
 }
 
 .disp-flex {
@@ -41,12 +42,15 @@ p {
 
 .main-page {
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .topics-toolbar {
     height: 70px;
     background-color: #8e929f;
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -62,4 +66,32 @@ p {
     font-size: 24px;
     cursor: pointer;
     padding-right: 5px;
+}
+
+@media (max-width: 992px) {
+    .topics-toolbar {
+        width: 100%;
+    }
+
+    .topic-topic {
+        flex: 4;
+    }
+
+    .topic-replies {
+        display: none;
+    }
+
+    .topic-post-info {
+        flex: 2
+    }
+
+    .topic-favorites {
+        flex: 1
+    }
+}
+
+@media (max-width: 768px) {
+    .topic-post-info {
+        display: none;
+    }
 }

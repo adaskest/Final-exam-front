@@ -1,1 +1,1 @@
-.topic {    min-height: 50px;    background-color: rgb(227, 227, 227);    color: #423b3b;    padding: 0 20px;    display: flex;    align-items: center;    margin-bottom: 5px;    border-radius: 10px;}.topic a {    color: #423b3b;    text-decoration: none;}
+.topic {    min-height: 50px;    background-color: rgb(227, 227, 227);    color: #423b3b;    padding: 0 10px;    display: flex;    align-items: center;    margin-bottom: 5px;    border-radius: 10px;}.topic a {    color: #423b3b;    text-decoration: none;}

@@ -3,7 +3,7 @@ import "./style.css"
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import http from "../../plugins/http";
-import TopicComponent from "../oneTopic/TopicComponent";
+import TopicPostComp from "./TopicPostComp";
 
 const UserProfile = () => {
 
@@ -28,14 +28,19 @@ const UserProfile = () => {
     }, [])
 
     return (
-        <div className="flex stay-top column-responsive-small column-responsive-medium">
-            <div className="flex grow1 ">
+        <div className="flex user-profile stay-top">
+            <div className="flex grow1 user-siderbar">
                 <Sidebar/>
             </div>
-            <div className="flex grow3 flex-column">
+            <div className="flex grow3 user-header flex-column">
                 <Header userTopics={userTopics} tab={tab} setTab={setTab} userPosts={userPosts}/>
+                <div className='topics-toolbar'>
+                    <h5 className='col-7 topic-topic ms-sm-2'>Topic</h5>
+                    <h5 className='col-1 topic-replies text-center'>Replies</h5>
+                    <h5 className='col-4 topic-post-info text-center'>Last post</h5>
+                </div>
                 {tab === 'topics' ? userTopics.topics.map((topic, i) =>
-                    <TopicComponent key={i} topic={topic}/>) : userPosts.posts.map((post, i) => <TopicComponent key={i} topic={post}/>)}
+                    <TopicPostComp key={i} topic={topic}/>) : userPosts.posts.map((post, i) => <TopicPostComp key={i} topic={post}/>)}
             </div>
         </div>
 
